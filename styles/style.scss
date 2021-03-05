@@ -1,0 +1,13 @@
+@import url('https://fonts.google.com/specimen/Raleway');
+@import url('https://fonts.google.com/specimen/Open+Sans');
+@import 'colors&etc.scss';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', 'Ralway', Georgia, 'Times New Roman', Times, serif;
+}
