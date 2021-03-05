@@ -50,17 +50,23 @@ body{
      border: none;
      border-radius: 3px;
      cursor: pointer;
-}
+    &:hover{
+        background-color: $white;
+        border: 0.8px solid $BrightBlue;
+        color: $BrightBlue;
+    }
+    }
 .card{
-    width: 27%;
-    height: 100%;
-    max-height: 18rem;
+    display: block;
+    flex-direction: column;
+    width: 40%;
+    height: 14rem;
     background-color: $white;
     border-radius: 8px;
     box-shadow: 0px 3px 15px rgba( 0, 0, 0, 0.3);
     padding: 2rem;
     & .quote{
-        font-size: 2rem;
+        font-size: 0.7rem;
     }
     & p{
         color: $VeryDarkBlue;
@@ -82,6 +88,17 @@ body{
     }
 
 }
+ @media screen and (max-width: 1200px) {
+width: 15rem;
+padding: 1rem 0.6rem;
+& p{
+    color: $VeryDarkBlue;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    width: 12rem;
+    line-height: 1;
+}
+}
 }
 .header{
     & .navbar{
@@ -98,7 +115,7 @@ body{
              }
         }
     }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1000px) {
         
           .navbar{
            display: flex;
@@ -106,6 +123,7 @@ body{
 
            & .logo{
                width: 30%;
+               cursor: pointer;
                & img{
                    width: 75%;
                }
@@ -160,7 +178,7 @@ body{
             }
         }
     }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1000px) {
       .hero{
             display: grid;
         grid-template-columns: 1fr;
@@ -184,5 +202,187 @@ body{
 
   & .grid{
       display: flex;
+
+      & .left__side{
+          width: 70%;
+        padding: 2.2rem;
+
+        & .title{
+          line-height: 2;
+          font-weight: 900;
+        }
+        & .pro__text{
+            padding-top: 1rem;
+            line-height: 1.2;
+            width: 50%;
+        }
+          & .works__btn{
+              padding: 1rem 0;
+              text-align: start;
+              & span{
+                  color: $ModerateCyan;
+                  border-bottom: 1px solid $ModerateCyan;
+                 
+              & .arrow{
+                  width: 1.4rem !important;
+                  cursor: pointer;
+                  margin-top: 0.3rem;
+              }
+            }
+          }
+      }
+    & .image__box{
+          width: 50%;
+          position: relative;
+          padding: 4rem 0;
+          & img{
+          width: 600px;  
+        }
+    }
   }
+  @media screen and (max-width: 1000px) {
+     & .grid{
+        flex-direction: column;
+        justify-content: center;
+        & .left__side{
+            order: 2;
+            width: 100%;
+            & .title{
+                width: 100%;
+            }
+        }
+        & .image__box{
+            order: 1;
+        }
+     }
+    
+  }
+
+}
+
+/*get early accsess style*/
+.showcase{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $DesaturatedBlue;
+    height: 17rem;
+
+    & .title{
+        & h1{
+            color: $white;
+        }
+        & p{
+            color: $LightGray;
+            width: 50%;
+            padding-top: 2rem;
+        }
+    }
+    & form{
+        margin-left: -8rem;
+       & input{
+        width: 28rem;
+        height: 2rem;
+        border-radius: 3px;
+        border: 0.8px solid $VeryDarkBlue;
+        outline: none;
+        &[placeholder]{
+          padding-left: 0.4rem;
+        }
+       }
+
+       & .btn{
+           margin-top: 1rem;
+       }
+    }
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+
+        & .title{
+            & h1{
+               text-align: center;
+            }
+            & p{
+                width: 90%;
+                padding-bottom: 1rem;
+            }
+        }
+
+        & form{
+            margin-left: -8rem;
+           & input{
+            width: 100%;
+            height: 2rem;
+            border-radius: 3px;
+            border: 0.8px solid $VeryDarkBlue;
+            outline: none;
+            &[placeholder]{
+              padding-left: 0.4rem;
+            }
+           }
+           & .btn{
+               margin-top: 0.9rem;
+           }
+        }
+    }
+}
+/*footer*/
+.footer{
+    background-color: $VeryDarkBlue;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 1rem;
+    & .logo{
+        width: 10rem;
+    }
+    &.col{
+        background-color: #f00;
+    }
+    & .contact{
+        color: $white;
+        margin-top: 1rem;
+        & img{
+            width: 1rem;
+        }
+        & span{
+            margin-left: 0.7rem;
+            color: $LightGray;
+        }
+    }
+
+    & .about__us{
+     padding-top: 0.4rem;
+     & .links{
+         padding-top: 1rem;
+         cursor: pointer;
+         &:hover{
+             color: $BrightBlue;
+         }
+     }
+    }
+
+    & .social{
+        padding-top: 3rem;
+        & .social__icon{
+            color: $white;
+            font-size: 2rem;
+            margin-left: 1rem;
+            cursor: pointer;
+
+            &:hover{
+                color: $BrightBlue;
+            }
+
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
