@@ -17,3 +17,9 @@ if ( miu < 10) {
 }
 today = dd + '/' + mm + '/' + yy;
 console.log(today);
+
+const inputArea = document.getElementById('myInput');
+const myButton = document.querySelectorAll('.btn');
+myButton.onclick = function () {
+    
+}
